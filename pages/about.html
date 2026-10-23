@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ShonenHub | The Ultimate Otaku Sanctuary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css-sheets/about.css">
+</head>
+<body>
+
+   
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+
+    
+    <nav>
+        <div class="logo">
+            <a href="../index.html"><img src="../pictures/shonenHUb.png" alt="ShonenHub Logo" /></a>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="./toprated.html"><li>Top Rated</li></a>
+                <a href="./mangas.html"><li>Mangas</li></a>
+                <a href="./about.html" class="active"><li>About</li></a>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="uniquebtn" onclick="window.location.href='./login.html'">Login</button>
+            <button onclick="window.location.href='./register.html'">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="hero-grid">
+                
+                <!-- Left: Hero Manifesto -->
+                <div class="hero-content">
+                    <div class="hero-badge-row">
+                        <span class="hero-tag">⚡ THE OTAKU ARCHIVE // EST. 2024</span>
+                        <span class="hero-jp-tag">情熱から生まれ、次世代の冒険者へ</span>
+                    </div>
+
+                    <h1>BUILT BY FANS.<br>FORGED FOR <span class="gradient-text">LEGENDS.</span></h1>
+
+                    <p class="hero-lead">
+                        ShonenHub was born out of pure frustration with laggy video players, 15 pop-up scams per episode, 
+                        and grainy manga scans. We forged an <strong>ultra-clean, lightning-fast dark sanctuary</strong> 
+                        where every anime legend and graphic masterpiece is celebrated the way mangaka intended.
+                    </p>
+
+                    <!-- Creed Badges -->
+                    <div class="hero-creed-tags">
+                        <span class="creed-tag">🛡️ 100% Ad-Free Vision</span>
+                        <span class="creed-tag">⚡ 60FPS HD Streaming</span>
+                        <span class="creed-tag">📖 Lossless 300DPI Scans</span>
+                        <span class="creed-tag">🌐 Global Nakama Circle</span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="#saga" class="btn-primary">
+                            <span>Explore Our Saga</span>
+                            <span>➔</span>
+                        </a>
+                        <a href="./toprated.html" class="btn-secondary">
+                            <span>Watch Top Rated</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive 3D Poster Showcase Card -->
+                <div class="hero-visual-card">
+                  
+                    <img height="510px" width="450px" src="../pictures/luffy.jpg">
+                  
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+
+    <!-- Hall of Heroes: Interactive Quotes & Aura Generator -->
+    <section class="quotes-section">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag"><span class="dot"></span> SPIRIT OF SHONEN</span>
+                <h2>The Hall of Iconic Mentors</h2>
+                <p>Click any legend to channel their resolve, sound effects, and battlefield aura.</p>
+                <div class="kanji-watermark">言霊 // WORDS OF POWER</div>
+            </div>
+
+            <!-- Character Selector Buttons -->
+            <div class="quote-char-selector">
+                <button class="quote-char-btn active" data-char="gojo">
+                    <img src="../pictures/jjk.jpeg" alt="Gojo">
+                    <span>Satoru Gojo</span>
+                </button>
+                <button class="quote-char-btn" data-char="naruto">
+                    <img src="../pictures/naruto.webp" alt="Naruto">
+                    <span>Naruto Uzumaki</span>
+                </button>
+                <button class="quote-char-btn" data-char="eren">
+                    <img src="../pictures/aot.jpg" alt="Eren">
+                    <span>Eren Yeager</span>
+                </button>
+                <button class="quote-char-btn" data-char="ichigo">
+                    <img src="../pictures/bleach.jpg" alt="Ichigo">
+                    <span>Ichigo Kurosaki</span>
+                </button>
+                <button class="quote-char-btn" data-char="denji">
+                    <img src="../pictures/csm.jpg" alt="Denji">
+                    <span>Denji</span>
+                </button>
+            </div>
+
+            <!-- Dynamic Quote Card -->
+            <div class="quote-display-card">
+                <div class="quote-display-inner">
+                    <div class="quote-avatar-wrapper">
+                        <img id="active-quote-avatar" src="../pictures/jjk.jpeg" alt="Satoru Gojo">
+                    </div>
+
+                    <div class="quote-content-col">
+                        <span class="quote-sfx-badge" id="active-quote-sfx">[ 領域展開 // DOMAIN EXPANSION ]</span>
+                        <div class="quote-text" id="active-quote-text">
+                            "Throughout heaven and earth, I alone am the honored one."
+                        </div>
+                        <div class="quote-author-info">
+                            <span class="quote-author" id="active-quote-author">Satoru Gojo</span>
+                            <span class="quote-anime" id="active-quote-anime">Jujutsu Kaisen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- The Otaku Guild (Team / Creators) -->
+    <section class="team-section">
+        <div class="container">
+            
+            <div class="section-header">
+                <span class="section-tag"><span class="dot"></span> THE GUILD</span>
+                <h2>Meet the Creators Behind the Screen</h2>
+                <p>Passionate developers, archivists, and designers working tirelessly for the community.</p>
+                <div class="kanji-watermark">創作者の仲間 // GUILD ALLIANCE</div>
+            </div>
+
+            <div class="team-grid">
+                
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <div class="team-avatar-box">
+                        <img src="../pictures/WhatsApp Image 2026-10-12 at 18.27.19.jpeg" alt="Karan V.">
+                    </div>
+                    <h3>Karan Kamble</h3>
+                    <div class="team-role">UI obsessed Developer</div>
+                    <p class="team-bio">
+                        Full-stack sorcerer obsessed with dark mode glassmorphism, zero-latency streaming, and anime lore.
+                    </p>
+                    <div class="team-stats">
+                        <span class="team-badge-pill">🔥 Fav: Attack On Titan</span>
+                        <span class="team-badge-pill">⚡ Speed Coder</span>
+                    </div>
+                </div>
+
+
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <div class="team-avatar-box">
+                        <img src="../pictures/WhatsApp Image 2026-10-12 at 18.37.56.jpeg" alt="Ryu K.">
+                    </div>
+                    <h3>Bhumi Jain</h3>
+                    <div class="team-role">UI/UX designer</div>
+                    <p class="team-bio">
+                       She is very enthusiastic about UI/UX design and she is also a very good UI/UX designer.
+                    </p>
+                    <div class="team-stats">
+                        <span class="team-badge-pill">⚔️ Fav: demon slayer</span>
+                        <span class="team-badge-pill">🛡️ UI/UX</span>
+                    </div>
+                </div>
+
+                   <!-- Member 2 -->
+                <div class="team-card">
+                    <div class="team-avatar-box">
+                        <img src="../pictures/WhatsApp Image 2026-10-12 at 18.29.55.jpeg" alt="Aoi M.">
+                    </div>
+                    <h3>Dheeraj Kalouni</h3>
+                    <div class="team-role">Chief Backend Architect</div>
+                    <p class="team-bio">
+                        Manga collector with 800+ physical tankobon volumes. Oversees lossless scan indexing and mangaka tributes.
+                    </p>
+                    <div class="team-stats">
+                        <span class="team-badge-pill">📖 Fav: Chainsaw Man</span>
+                        <span class="team-badge-pill">🎨 300DPI Specialist</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Finale Call To Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <span class="cta-tag">⚡ YOUR HERO ARC STARTS HERE</span>
+                <h2>Ready to Awaken Your Inner Hero?</h2>
+                <p>
+                    Join 50,000+ otaku who have already made ShonenHub their daily destination for 
+                    the greatest anime clashes and manga masterworks ever created.
+                </p>
+                <div class="cta-buttons">
+                    <a href="./toprated.html" class="btn-primary">
+                        <span>Explore Top Rated Anime</span>
+                        <span>➔</span>
+                    </a>
+                    <a href="./mangas.html" class="btn-secondary">
+                        <span>Browse Manga Catalog</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h2>SHONEN<span>HUB</span></h2>
+                <p>
+                    Your next anime and manga adventure starts here.
+                    Discover, watch, and explore your favorite anime.
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="../index.html">Home</a>
+                <a href="./toprated.html">Top Anime</a>
+                <a href="./mangas.html">Mangas</a>
+                <a href="./about.html">About</a>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-links">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="X Twitter">𝕏</a>
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                    <a href="#" aria-label="TikTok">♪</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ShonenHub. All rights reserved.</p>
+            <p>Made for anime & manga fans ⚡</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Engine -->
+    <script src="../js-sheets/about.js"></script>
+</body>
+</html>

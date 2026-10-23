@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+
+        <nav>
+            <div class="logo">
+                <a href="./index.html"><img src="./pictures/shonenHUb.png" alt="ShonenHub Logo" /></a>
+            </div>
+        <div class="links">
+            <ul>
+                <a href="./index.html" class="active"><li>Home</li></a>
+                <a href="./pages/toprated.html"><li>Top Rated</li></a>
+                <a href="./pages/mangas.html"><li>Mangas</li></a>
+                <a href="./pages/about.html"><li>About</li></a>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="uniquebtn" onclick="window.location.href='./pages/login.html'">Login</button>
+            <button onclick="window.location.href='./pages/register.html'">Sign Up</button>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h3>WATCH. DISCOVER. BECOME.</h3>
+        <H1>YOUR NEXT <br><span>ANIME ADVENTURE <br></span> STARTS HERE</H1>
+        <p>Stream your favourite anime, discover new world <br>and start a new adventure.</p>
+        <div class="btns">
+            <button onclick="document.getElementById('top-rated-section').scrollIntoView({ behavior: 'smooth' })">Start Watching</button>
+            <button onclick="window.location.href='./pages/toprated.html'">Explore Anime</button>
+        </div>
+    </div>
+    
+</section>
+
+<div class="cards" id="top-rated-section">
+    <div class="title">
+
+        <div class="heading">
+            <div class="redline"></div>
+            <div class="intro">
+                <h1>Top Rated Animes</h1>
+                <h4>Watch the best animated shows.</h4>
+            </div>
+        </div>
+        <div class="view" onclick="window.location.href='./pages/toprated.html'">
+            <h4>View All -> </h4>
+        </div>
+    </div>
+
+    <div class="card-section">
+
+    <div class="card">
+
+        <div class="card-image">
+            <img src="./pictures/jjk.jpeg" alt="Jujutsu Kaisen">
+
+            <span class="trending">🔥 Trending</span>
+
+            <button class="play-btn">▶</button>
+        </div>
+
+        <div class="card-content">
+
+            <h2>Jujutsu Kaisen</h2>
+
+            <p class="season">Season 2</p>
+
+            <div class="anime-info">
+                <span class="rating">★ 9.1</span>
+                <span>Action</span>
+                <span>Fantasy</span>
+                <span>Supernatural</span>
+            </div>
+
+            <p class="description">
+                Yuji Itadori continues his journey as a sorcerer,
+                facing stronger curses and deeper secrets.
+            </p>
+
+            <div class="card-buttons">
+                <button class="watch-btn">
+                    ▶ &nbsp; Watch Now
+                </button>
+
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Attack on Titan -->
+<div class="card">
+
+    <div class="card-image">
+        <img src="./pictures/aot.jpg" alt="Attack on Titan">
+
+        <span class="trending">🔥 Trending</span>
+
+        <button class="play-btn">▶</button>
+    </div>
+
+    <div class="card-content">
+
+        <h2>Attack on Titan</h2>
+
+        <p class="season">Final Season</p>
+
+        <div class="anime-info">
+            <span class="rating">★ 9.1</span>
+            <span>Action</span>
+            <span>Drama</span>
+            <span>Fantasy</span>
+        </div>
+
+        <p class="description">
+            Humanity fights for survival as the truth behind
+            the Titans begins to unfold.
+        </p>
+
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+           
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Naruto -->
+<div class="card">
+
+    <div class="card-image">
+        <img src="./pictures/naruto.webp" alt="Naruto Shippuden">
+
+        <span class="trending">🔥 Popular</span>
+
+        <button class="play-btn">▶</button>
+    </div>
+
+    <div class="card-content">
+
+        <h2>Naruto Shippuden</h2>
+
+        <p class="season">500 Episodes</p>
+
+        <div class="anime-info">
+            <span class="rating">★ 8.7</span>
+            <span>Action</span>
+            <span>Adventure</span>
+            <span>Shonen</span>
+        </div>
+
+        <p class="description">
+            Naruto returns stronger than ever and continues
+            his journey to become Hokage.
+        </p>
+
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+           
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Demon Slayer -->
+<div class="card">
+
+    <div class="card-image">
+        <img src="./pictures/zenitsu.webp" alt="Demon Slayer">
+
+        <span class="trending">🔥 Trending</span>
+
+        <button class="play-btn">▶</button>
+    </div>
+
+    <div class="card-content">
+
+        <h2>Demon Slayer</h2>
+
+        <p class="season">Season 4</p>
+
+        <div class="anime-info">
+            <span class="rating">★ 9.0</span>
+            <span>Action</span>
+            <span>Fantasy</span>
+            <span>Shonen</span>
+        </div>
+
+        <p class="description">
+            Tanjiro continues his journey to defeat demons
+            and save his sister Nezuko.
+        </p>
+
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+           
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+<div class="cards" id="upcoming-section">
+
+    <div class="title">
+
+        <div class="heading">
+            <div class="redline"></div>
+
+            <div class="intro">
+                <h1>Upcoming Anime</h1>
+                <h4>Watch out for these anime shows coming this summer.</h4>
+            </div>
+        </div>
+
+        <div class="view" onclick="window.location.href='./pages/toprated.html'">
+            <h4>View All -></h4>
+        </div>
+
+    </div>
+
+
+    <div class="card-section">
+
+        <!-- Kagurabachi -->
+        <div class="card">
+
+            <div class="card-image">
+                <img src="./pictures/kagurabachi.jpeg" alt="Kagurabachi">
+
+                <span class="trending">🔥 Trending</span>
+
+                <button class="play-btn">▶</button>
+            </div>
+
+            <div class="card-content">
+
+                <h2>Kagurabachi</h2>
+
+                <p class="season">Season 1</p>
+
+                <div class="anime-info">
+                    <span class="rating">★ 9.0</span>
+                    <span>Action</span>
+                    <span>Fantasy</span>
+                    <span>Shonen</span>
+                </div>
+
+                <p class="description">
+                    Chihiro Rokuhira sets out on a dangerous journey
+                    to reclaim his father's stolen enchanted blades.
+                </p>
+
+                <div class="card-buttons">
+                    <button class="watch-btn">
+                        ▶ &nbsp; Watch Now
+                    </button>
+
+                  
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mushoku Tensei -->
+        <div class="card">
+
+            <div class="card-image">
+                <img src="./pictures/tensei.jpg" alt="Mushoku Tensei">
+
+                <span class="trending">🔥 Popular</span>
+
+                <button class="play-btn">▶</button>
+            </div>
+
+            <div class="card-content">
+
+                <h2>Mushoku Tensei</h2>
+
+                <p class="season">Season 3</p>
+
+                <div class="anime-info">
+                    <span class="rating">★ 8.9</span>
+                    <span>Fantasy</span>
+                    <span>Adventure</span>
+                    <span>Isekai</span>
+                </div>
+
+                <p class="description">
+                    Rudeus continues his journey in a new chapter
+                    filled with adventure, magic, and challenges.
+                </p>
+
+                <div class="card-buttons">
+                    <button class="watch-btn">
+                        ▶ &nbsp; Watch Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Kaiju No. 8 -->
+        <div class="card">
+
+            <div class="card-image">
+                <img src="./pictures/kaiju.jpeg" alt="Kaiju No. 8">
+
+                <span class="trending">🔥 Trending</span>
+
+                <button class="play-btn">▶</button>
+            </div>
+
+            <div class="card-content">
+
+                <h2>Kaiju No. 8</h2>
+
+                <p class="season">Season 2</p>
+
+                <div class="anime-info">
+                    <span class="rating">★ 8.8</span>
+                    <span>Action</span>
+                    <span>Sci-Fi</span>
+                    <span>Shonen</span>
+                </div>
+
+                <p class="description">
+                    Kafka Hibino continues his fight against powerful
+                    Kaiju while hiding a dangerous secret.
+                </p>
+
+                <div class="card-buttons">
+                    <button class="watch-btn">
+                        ▶ &nbsp; Watch Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Devil May Cry -->
+        <div class="card">
+
+            <div class="card-image">
+                <img src="./pictures/devil.webp" alt="Devil May Cry">
+
+                <span class="trending">🔥 New</span>
+
+                <button class="play-btn">▶</button>
+            </div>
+
+            <div class="card-content">
+
+                <h2>Devil May Cry</h2>
+
+                <p class="season">Season 2</p>
+
+                <div class="anime-info">
+                    <span class="rating">★ 8.5</span>
+                    <span>Action</span>
+                    <span>Dark Fantasy</span>
+                    <span>Supernatural</span>
+                </div>
+
+                <p class="description">
+                    Dante returns for another demon-hunting adventure
+                    filled with chaos, mystery, and powerful enemies.
+                </p>
+
+                <div class="card-buttons">
+                    <button class="watch-btn">
+                        ▶ &nbsp; Watch Now
+                    </button>
+
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <div id="future">
+        <video id="video" src="./pictures/sukuna.mp4" muted loop playsinline preload="auto"></video>
+        <div id="ftext">
+            <button id="mayhem-btn">Join the Mayhem!</button>
+        </div>
+    </div>
+
+
+   <footer class="footer">
+
+    <div class="footer-content">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h2>SHONEN<span>HUB</span></h2>
+            <p>
+                Your next anime adventure starts here.
+                Discover, watch, and explore your favorite anime.
+            </p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="./index.html">Home</a>
+            <a href="./pages/toprated.html">Top Anime</a>
+            <a href="#upcoming-section">Upcoming</a>
+            <a href="./pages/about.html">About</a>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+            <h3>Support</h3>
+            <a href="./pages/about.html">Help Center</a>
+            <a href="./pages/about.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#">𝕏</a>
+                <a href="#">◎</a>
+                <a href="#">▶</a>
+                <a href="#">♪</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 ShonenHub. All rights reserved.</p>
+        <p>Made for anime fans ⚡</p>
+    </div>
+
+</footer>
+
+<div id="toast-popup" class="toast-popup"></div>
+
+    
+</body>
+<script src="script.js">
+
+</script>
+</html>

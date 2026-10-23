@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated Anime - ShonenHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css-sheets/toprated.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../index.html"><img src="../pictures/shonenHUb.png" alt="ShonenHub Logo" /></a>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="./toprated.html" class="active"><li>Top Rated</li></a>
+                <a href="./mangas.html"><li>Mangas</li></a>
+                <a href="./about.html"><li>About</li></a>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="uniquebtn" onclick="window.location.href='./login.html'">Login</button>
+            <button onclick="window.location.href='./register.html'">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Header & Search/Filter Section -->
+    <section class="toprated-hero">
+        <div class="heading-wrapper">
+            <div class="redline"></div>
+            <div class="heading-text">
+                <span class="badge">★ HIGHEST RATED</span>
+                <h1>Top Rated <span>Anime</span></h1>
+                <p>Explore legendary series and acclaimed fan favorites rated by millions of otaku worldwide.</p>
+            </div>
+        </div>
+
+        <!-- Controls: Search bar & Genre filters -->
+        <div class="controls-bar">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="anime-search" placeholder="Search anime by title, genre, or keyword..." autocomplete="off">
+                <button type="button" id="clear-search" class="clear-btn" aria-label="Clear search">✕</button>
+            </div>
+
+            <div class="filters-row">
+                <div class="filter-pills">
+                    <button class="filter-pill active" data-genre="all">All</button>
+                    <button class="filter-pill" data-genre="action">Action</button>
+                    <button class="filter-pill" data-genre="fantasy">Fantasy</button>
+                    <button class="filter-pill" data-genre="shonen">Shonen</button>
+                    <button class="filter-pill" data-genre="adventure">Adventure</button>
+                    <button class="filter-pill" data-genre="supernatural">Supernatural</button>
+                    <button class="filter-pill" data-genre="sci-fi">Sci-Fi</button>
+                </div>
+                <div class="results-meta">
+                    <span id="results-count">Showing 8 of 8 anime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Grid Section (4 cards per row) -->
+    <main class="cards-container">
+        <div class="card-grid" id="anime-grid">
+
+            <!-- 1. Jujutsu Kaisen -->
+            <div class="card" data-title="jujutsu kaisen" data-genres="action fantasy supernatural">
+                <div class="card-image">
+                    <img src="../pictures/jjk.jpeg" alt="Jujutsu Kaisen" loading="lazy">
+                    <span class="rank-badge">#1</span>
+                    <span class="trending">🔥 Trending</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Jujutsu Kaisen</h2>
+                    <p class="season">Season 2 • Shibuya Incident</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 9.1</span>
+                        <span>Action</span>
+                        <span>Fantasy</span>
+                        <span>Supernatural</span>
+                    </div>
+                    <p class="description">
+                        Yuji Itadori continues his journey as a sorcerer, facing stronger curses and deeper secrets.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Attack on Titan -->
+            <div class="card" data-title="attack on titan aot" data-genres="action drama fantasy">
+                <div class="card-image">
+                    <img src="../pictures/aot.jpg" alt="Attack on Titan" loading="lazy">
+                    <span class="rank-badge">#2</span>
+                    <span class="trending">🔥 Masterpiece</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Attack on Titan</h2>
+                    <p class="season">Final Season • The Final Chapters</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 9.1</span>
+                        <span>Action</span>
+                        <span>Drama</span>
+                        <span>Fantasy</span>
+                    </div>
+                    <p class="description">
+                        Humanity fights for survival as the truth behind the Titans and the outside world unfolds.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Demon Slayer -->
+            <div class="card" data-title="demon slayer kimetsu no yaiba" data-genres="action fantasy shonen">
+                <div class="card-image">
+                    <img src="../pictures/zenitsu.webp" alt="Demon Slayer" loading="lazy">
+                    <span class="rank-badge">#3</span>
+                    <span class="trending">🔥 Popular</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Demon Slayer</h2>
+                    <p class="season">Season 4 • Hashira Training</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 9.0</span>
+                        <span>Action</span>
+                        <span>Fantasy</span>
+                        <span>Shonen</span>
+                    </div>
+                    <p class="description">
+                        Tanjiro continues his grueling training with the Hashira to prepare for the battle with Muzan.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Kagurabachi -->
+            <div class="card" data-title="kagurabachi" data-genres="action fantasy shonen">
+                <div class="card-image">
+                    <img src="../pictures/kagurabachi.jpeg" alt="Kagurabachi" loading="lazy">
+                    <span class="rank-badge">#4</span>
+                    <span class="trending">🔥 Trending</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Kagurabachi</h2>
+                    <p class="season">Season 1 • Enchanted Blades</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 9.0</span>
+                        <span>Action</span>
+                        <span>Fantasy</span>
+                        <span>Shonen</span>
+                    </div>
+                    <p class="description">
+                        Chihiro Rokuhira sets out on a dangerous journey to reclaim his father's stolen enchanted blades.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Mushoku Tensei -->
+            <div class="card" data-title="mushoku tensei jobless reincarnation" data-genres="fantasy adventure isekai">
+                <div class="card-image">
+                    <img src="../pictures/tensei.jpg" alt="Mushoku Tensei" loading="lazy">
+                    <span class="rank-badge">#5</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Mushoku Tensei</h2>
+                    <p class="season">Season 3 • Labyrinth Arc</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 8.9</span>
+                        <span>Fantasy</span>
+                        <span>Adventure</span>
+                        <span>Isekai</span>
+                    </div>
+                    <p class="description">
+                        Rudeus continues his journey in a new chapter filled with adventure, magic, and life challenges.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Kaiju No. 8 -->
+            <div class="card" data-title="kaiju no 8 kaiju" data-genres="action sci-fi shonen">
+                <div class="card-image">
+                    <img src="../pictures/kaiju.jpeg" alt="Kaiju No. 8" loading="lazy">
+                    <span class="rank-badge">#6</span>
+                    <span class="trending">🔥 Top Sci-Fi</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Kaiju No. 8</h2>
+                    <p class="season">Season 2 • Defense Force</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 8.8</span>
+                        <span>Action</span>
+                        <span>Sci-Fi</span>
+                        <span>Shonen</span>
+                    </div>
+                    <p class="description">
+                        Kafka Hibino continues his fight against monstrous Kaiju while hiding a dangerous secret.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Naruto Shippuden -->
+            <div class="card" data-title="naruto shippuden" data-genres="action adventure shonen">
+                <div class="card-image">
+                    <img src="../pictures/naruto.webp" alt="Naruto Shippuden" loading="lazy">
+                    <span class="rank-badge">#7</span>
+                    <span class="trending">🔥 Classic</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Naruto Shippuden</h2>
+                    <p class="season">500 Episodes • Complete Series</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 8.7</span>
+                        <span>Action</span>
+                        <span>Adventure</span>
+                        <span>Shonen</span>
+                    </div>
+                    <p class="description">
+                        Naruto returns stronger than ever to protect his ninja comrades and achieve his dream of Hokage.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Devil May Cry -->
+            <div class="card" data-title="devil may cry dmc" data-genres="action dark fantasy supernatural">
+                <div class="card-image">
+                    <img src="../pictures/devil.webp" alt="Devil May Cry" loading="lazy">
+                    <span class="rank-badge">#8</span>
+                    <span class="trending">🔥 New</span>
+                    <button class="play-btn">▶</button>
+                </div>
+                <div class="card-content">
+                    <h2>Devil May Cry</h2>
+                    <p class="season">Season 2 • Demon Hunt</p>
+                    <div class="anime-info">
+                        <span class="rating">★ 8.5</span>
+                        <span>Action</span>
+                        <span>Dark Fantasy</span>
+                        <span>Supernatural</span>
+                    </div>
+                    <p class="description">
+                        Dante returns for another demon-hunting adventure filled with high-octane swordplay and stylish combos.
+                    </p>
+                    <div class="card-buttons">
+                        <button class="watch-btn">▶ Watch Now</button>
+                        <button class="add-btn">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bleach -->
+<div class="card" data-title="bleach thousand year blood war" data-genres="action supernatural fantasy">
+    <div class="card-image">
+        <img src="../pictures/bleach.jpg" alt="Bleach" loading="lazy">
+        <span class="rank-badge">#9</span>
+        <span class="trending">🔥 Popular</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>Bleach</h2>
+        <p class="season">Thousand-Year Blood War</p>
+        <div class="anime-info">
+            <span class="rating">★ 9.0</span>
+            <span>Action</span>
+            <span>Supernatural</span>
+            <span>Fantasy</span>
+        </div>
+        <p class="description">
+            Ichigo Kurosaki returns to battle powerful enemies as the Soul Society faces its greatest threat yet.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Hunter x Hunter -->
+<div class="card" data-title="hunter x hunter" data-genres="action adventure fantasy">
+    <div class="card-image">
+        <img src="../pictures/hxh.jpg" alt="Hunter x Hunter" loading="lazy">
+        <span class="rank-badge">#10</span>
+        <span class="trending">🔥 Classic</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>Hunter x Hunter</h2>
+        <p class="season">148 Episodes • Hunter Exam</p>
+        <div class="anime-info">
+            <span class="rating">★ 9.0</span>
+            <span>Action</span>
+            <span>Adventure</span>
+            <span>Fantasy</span>
+        </div>
+        <p class="description">
+            Gon sets out on an incredible journey to become a Hunter and discover the truth about his mysterious father.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- My Hero Academia -->
+<div class="card" data-title="my hero academia" data-genres="action superhero school">
+    <div class="card-image">
+        <img src="../pictures/mha.webp" alt="My Hero Academia" loading="lazy">
+        <span class="rank-badge">#11</span>
+        <span class="trending">🔥 Trending</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>My Hero Academia</h2>
+        <p class="season">Final Season • Heroes</p>
+        <div class="anime-info">
+            <span class="rating">★ 8.7</span>
+            <span>Action</span>
+            <span>Superhero</span>
+            <span>School</span>
+        </div>
+        <p class="description">
+            Izuku Midoriya and the heroes face their ultimate battle against powerful villains threatening society.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Chainsaw Man -->
+<div class="card" data-title="chainsaw man" data-genres="action horror supernatural">
+    <div class="card-image">
+        <img src="../pictures/csm.jpg" alt="Chainsaw Man" loading="lazy">
+        <span class="rank-badge">#12</span>
+        <span class="trending">🔥 Hot</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>Chainsaw Man</h2>
+        <p class="season">Season 1 • Devil Hunter</p>
+        <div class="anime-info">
+            <span class="rating">★ 8.8</span>
+            <span>Action</span>
+            <span>Horror</span>
+            <span>Supernatural</span>
+        </div>
+        <p class="description">
+            Denji becomes Chainsaw Man after a deadly encounter and joins a dangerous organization of devil hunters.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Blue Lock -->
+<div class="card" data-title="blue lock" data-genres="sports football drama">
+    <div class="card-image">
+        <img src="../pictures/bluelock.jpg" alt="Blue Lock" loading="lazy">
+        <span class="rank-badge">#13</span>
+        <span class="trending">🔥 Rising</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>Blue Lock</h2>
+        <p class="season">Season 2 • Football</p>
+        <div class="anime-info">
+            <span class="rating">★ 8.6</span>
+            <span>Sports</span>
+            <span>Football</span>
+            <span>Drama</span>
+        </div>
+        <p class="description">
+            Talented young strikers compete in an intense training program designed to create Japan's ultimate striker.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Tokyo Ghoul -->
+<div class="card" data-title="tokyo ghoul" data-genres="action horror supernatural dark fantasy">
+    <div class="card-image">
+        <img src="../pictures/tokyo.webp" alt="Tokyo Ghoul" loading="lazy">
+        <span class="rank-badge">#14</span>
+        <span class="trending">🔥 Dark</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>Tokyo Ghoul</h2>
+        <p class="season">Season 1 • Ghoul World</p>
+        <div class="anime-info">
+            <span class="rating">★ 8.4</span>
+            <span>Action</span>
+            <span>Horror</span>
+            <span>Dark Fantasy</span>
+        </div>
+        <p class="description">
+            Ken Kaneki's life changes forever when he becomes a half-ghoul and is forced to survive between two worlds.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Black Clover -->
+<div class="card" data-title="black clover" data-genres="action fantasy magic">
+    <div class="card-image">
+        <img src="../pictures/blackclover.webp" alt="Black Clover" loading="lazy">
+        <span class="rank-badge">#15</span>
+        <span class="trending">🔥 Popular</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>Black Clover</h2>
+        <p class="season">170 Episodes • Magic Knights</p>
+        <div class="anime-info">
+            <span class="rating">★ 8.6</span>
+            <span>Action</span>
+            <span>Fantasy</span>
+            <span>Magic</span>
+        </div>
+        <p class="description">
+            Asta dreams of becoming the Wizard King despite having no magic in a world where magic is everything.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Vinland Saga -->
+<div class="card" data-title="vinland saga" data-genres="action historical drama">
+    <div class="card-image">
+        <img src="../pictures/vinland.jpg" alt="Vinland Saga" loading="lazy">
+        <span class="rank-badge">#16</span>
+        <span class="trending">🔥 Epic</span>
+        <button class="play-btn">▶</button>
+    </div>
+    <div class="card-content">
+        <h2>Vinland Saga</h2>
+        <p class="season">Season 2 • New Beginnings</p>
+        <div class="anime-info">
+            <span class="rating">★ 8.9</span>
+            <span>Action</span>
+            <span>Historical</span>
+            <span>Drama</span>
+        </div>
+        <p class="description">
+            Thorfinn searches for a new purpose in life while carrying the scars of a violent past filled with war.
+        </p>
+        <div class="card-buttons">
+            <button class="watch-btn">▶ Watch Now</button>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <!-- Empty state when no search matches -->
+        <div id="no-results" class="no-results" style="display: none;">
+            <div class="no-results-icon">⛩️</div>
+            <h3>No anime matched your search</h3>
+            <p>Try searching with another keyword or reset the filter tags.</p>
+            <button id="reset-filters-btn">Reset All Filters</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h2>SHONEN<span>HUB</span></h2>
+                <p>
+                    Your next anime adventure starts here.
+                    Discover, watch, and explore your favorite anime.
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="../index.html">Home</a>
+                <a href="./toprated.html">Top Anime</a>
+                <a href="./mangas.html">Mangas</a>
+                <a href="./about.html">About</a>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-links">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#">𝕏</a>
+                    <a href="#">◎</a>
+                    <a href="#">▶</a>
+                    <a href="#">♪</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ShonenHub. All rights reserved.</p>
+            <p>Made for anime fans ⚡</p>
+        </div>
+    </footer>
+
+    <script src="../js-sheets/toprated.js"></script>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Catalog - ShonenHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css-sheets/manga.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="../index.html"><img src="../pictures/shonenHUb.png" alt="ShonenHub Logo" /></a>
+        </div>
+        <div class="links">
+            <ul>
+                <a href="../index.html"><li>Home</li></a>
+                <a href="./toprated.html"><li>Top Rated</li></a>
+                <a href="./mangas.html" class="active"><li>Mangas</li></a>
+                <a href="./about.html"><li>About</li></a>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="uniquebtn" onclick="window.location.href='./login.html'">Login</button>
+            <button onclick="window.location.href='./register.html'">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Header & Search/Filter Section -->
+    <section class="manga-hero">
+        <div class="heading-wrapper">
+            <div class="redline"></div>
+            <div class="heading-text">
+                <span class="badge">📚 OFFICIAL MANGA VAULT</span>
+                <h1>Read <span>Manga</span> Online</h1>
+                <p>Discover trending tankobon volumes, weekly chapters, and timeless graphic novels from iconic mangaka.</p>
+            </div>
+        </div>
+
+        <!-- Controls: Search bar, Genre filters & Status toggles -->
+        <div class="controls-bar">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="manga-search" placeholder="Search manga by title, author, genre..." autocomplete="off">
+                <button type="button" id="clear-search" class="clear-btn" aria-label="Clear search">✕</button>
+            </div>
+
+            <div class="filters-row">
+                <div class="filter-group">
+                    <button class="filter-pill genre-pill active" data-genre="all">All Genres</button>
+                    <button class="filter-pill genre-pill" data-genre="shonen">Shonen</button>
+                    <button class="filter-pill genre-pill" data-genre="dark fantasy">Dark Fantasy</button>
+                    <button class="filter-pill genre-pill" data-genre="action">Action</button>
+                    <button class="filter-pill genre-pill" data-genre="sports">Sports</button>
+                    <button class="filter-pill genre-pill" data-genre="psychological">Psychological</button>
+                    <button class="filter-pill genre-pill" data-genre="supernatural">Supernatural</button>
+                    <button class="filter-pill genre-pill" data-genre="adventure">Adventure</button>
+                </div>
+
+                <div class="filter-group">
+                    <button class="filter-pill status-pill active" data-status="all">All Status</button>
+                    <button class="filter-pill status-pill" data-status="ongoing">🟢 Ongoing</button>
+                    <button class="filter-pill status-pill" data-status="completed">🟣 Completed</button>
+                </div>
+
+                <div class="results-meta">
+                    <span id="results-count">Showing 12 of 12 manga</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manga Cards Grid (4 columns per row) -->
+    <main class="cards-container">
+        <div class="manga-grid" id="manga-grid">
+
+            <!-- 1. Chainsaw Man -->
+            <div class="manga-card" data-title="chainsaw man csm" data-author="tatsuki fujimoto" data-genres="dark fantasy action supernatural" data-status="ongoing">
+                <div class="manga-cover">
+                    <img src="../pictures/csm.jpg" alt="Chainsaw Man" loading="lazy">
+                    <span class="status-badge ongoing">● Ongoing</span>
+                    <span class="rating-badge">★ 9.3</span>
+                    <span class="chapter-count-pill">Ch. 182</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Chainsaw Man</h2>
+                        <p class="manga-author">By <span>Tatsuki Fujimoto</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Dark Fantasy</span>
+                        <span>Action</span>
+                        <span>Supernatural</span>
+                    </div>
+                    <p class="manga-desc">
+                        Denji is a teenage boy living with a Chainsaw Devil named Pochita who gets recruited into Public Safety devil hunting.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Bleach -->
+            <div class="manga-card" data-title="bleach" data-author="tite kubo" data-genres="shonen action supernatural" data-status="completed">
+                <div class="manga-cover">
+                    <img src="../pictures/bleach.jpg" alt="Bleach" loading="lazy">
+                    <span class="status-badge completed">● Completed</span>
+                    <span class="rating-badge">★ 9.1</span>
+                    <span class="chapter-count-pill">686 Ch.</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Bleach</h2>
+                        <p class="manga-author">By <span>Tite Kubo</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Shonen</span>
+                        <span>Action</span>
+                        <span>Supernatural</span>
+                    </div>
+                    <p class="manga-desc">
+                        Ichigo Kurosaki gains the abilities of a Soul Reaper and defends Karakura Town from malevolent Hollow spirits.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Blue Lock -->
+            <div class="manga-card" data-title="blue lock" data-author="muneyuki kaneshiro" data-genres="sports psychological shonen" data-status="ongoing">
+                <div class="manga-cover">
+                    <img src="../pictures/bluelock.jpg" alt="Blue Lock" loading="lazy">
+                    <span class="status-badge ongoing">● Ongoing</span>
+                    <span class="rating-badge">★ 8.9</span>
+                    <span class="chapter-count-pill">Ch. 280</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Blue Lock</h2>
+                        <p class="manga-author">By <span>Muneyuki Kaneshiro</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Sports</span>
+                        <span>Psychological</span>
+                        <span>Shonen</span>
+                    </div>
+                    <p class="manga-desc">
+                        Three hundred high school forwards compete in a ruthless egoist soccer training project to produce Japan's best striker.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Black Clover -->
+            <div class="manga-card" data-title="black clover" data-author="yuki tabata" data-genres="shonen fantasy action" data-status="ongoing">
+                <div class="manga-cover">
+                    <img src="../pictures/blackclover.webp" alt="Black Clover" loading="lazy">
+                    <span class="status-badge ongoing">● Ongoing</span>
+                    <span class="rating-badge">★ 8.7</span>
+                    <span class="chapter-count-pill">Ch. 372</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Black Clover</h2>
+                        <p class="manga-author">By <span>Yūki Tabata</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Shonen</span>
+                        <span>Fantasy</span>
+                        <span>Action</span>
+                    </div>
+                    <p class="manga-desc">
+                        Born with no magical powers in a magic-governed realm, Asta wields mysterious Anti-Magic to become the Wizard King.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Hunter x Hunter -->
+            <div class="manga-card" data-title="hunter x hunter hxh" data-author="yoshihiro togashi" data-genres="adventure psychological shonen" data-status="ongoing">
+                <div class="manga-cover">
+                    <img src="../pictures/hxh.jpg" alt="Hunter x Hunter" loading="lazy">
+                    <span class="status-badge ongoing">● Ongoing</span>
+                    <span class="rating-badge">★ 9.5</span>
+                    <span class="chapter-count-pill">Ch. 405</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Hunter x Hunter</h2>
+                        <p class="manga-author">By <span>Yoshihiro Togashi</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Adventure</span>
+                        <span>Psychological</span>
+                        <span>Shonen</span>
+                    </div>
+                    <p class="manga-desc">
+                        Gon Freecss embarks on a dangerous trial to earn his Hunter license, searching for the truth behind his missing father.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Vinland Saga -->
+            <div class="manga-card" data-title="vinland saga" data-author="makoto yukimura" data-genres="action adventure psychological" data-status="ongoing">
+                <div class="manga-cover">
+                    <img src="../pictures/vinland.jpg" alt="Vinland Saga" loading="lazy">
+                    <span class="status-badge ongoing">● Ongoing</span>
+                    <span class="rating-badge">★ 9.4</span>
+                    <span class="chapter-count-pill">Ch. 215</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Vinland Saga</h2>
+                        <p class="manga-author">By <span>Makoto Yukimura</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Action</span>
+                        <span>Adventure</span>
+                        <span>Psychological</span>
+                    </div>
+                    <p class="manga-desc">
+                        Raised among brutal Vikings, Thorfinn journeys through bloody battlefields seeking retribution and ultimate redemption.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Tokyo Ghoul -->
+            <div class="manga-card" data-title="tokyo ghoul" data-author="sui ishida" data-genres="dark fantasy psychological supernatural" data-status="completed">
+                <div class="manga-cover">
+                    <img src="../pictures/tokyo.webp" alt="Tokyo Ghoul" loading="lazy">
+                    <span class="status-badge completed">● Completed</span>
+                    <span class="rating-badge">★ 9.2</span>
+                    <span class="chapter-count-pill">325 Ch.</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Tokyo Ghoul</h2>
+                        <p class="manga-author">By <span>Sui Ishida</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Dark Fantasy</span>
+                        <span>Psychological</span>
+                        <span>Supernatural</span>
+                    </div>
+                    <p class="manga-desc">
+                        College student Ken Kaneki survives a fatal attack by becoming half-ghoul, struggling between human and predator morality.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. My Hero Academia -->
+            <div class="manga-card" data-title="my hero academia mha" data-author="kohei horikoshi" data-genres="shonen action superhero" data-status="completed">
+                <div class="manga-cover">
+                    <img src="../pictures/mha.webp" alt="My Hero Academia" loading="lazy">
+                    <span class="status-badge completed">● Completed</span>
+                    <span class="rating-badge">★ 8.8</span>
+                    <span class="chapter-count-pill">430 Ch.</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">My Hero Academia</h2>
+                        <p class="manga-author">By <span>Kōhei Horikoshi</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Shonen</span>
+                        <span>Action</span>
+                        <span>Superpower</span>
+                    </div>
+                    <p class="manga-desc">
+                        In a world filled with superhuman Quirks, quirkless Izuku Midoriya receives One For All to become the greatest protector.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Jujutsu Kaisen -->
+            <div class="manga-card" data-title="jujutsu kaisen jjk" data-author="gege akutami" data-genres="action dark fantasy supernatural" data-status="completed">
+                <div class="manga-cover">
+                    <img src="../pictures/jjk.jpeg" alt="Jujutsu Kaisen" loading="lazy">
+                    <span class="status-badge completed">● Completed</span>
+                    <span class="rating-badge">★ 9.2</span>
+                    <span class="chapter-count-pill">271 Ch.</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Jujutsu Kaisen</h2>
+                        <p class="manga-author">By <span>Gege Akutami</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Action</span>
+                        <span>Dark Fantasy</span>
+                        <span>Supernatural</span>
+                    </div>
+                    <p class="manga-desc">
+                        Yuji Itadori ingests the cursed finger of Sukuna and enters the dangerous realm of Jujutsu sorcery and curses.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Kagurabachi -->
+            <div class="manga-card" data-title="kagurabachi" data-author="takeru hokazono" data-genres="shonen action dark fantasy" data-status="ongoing">
+                <div class="manga-cover">
+                    <img src="../pictures/kagurabachi.jpeg" alt="Kagurabachi" loading="lazy">
+                    <span class="status-badge ongoing">● Ongoing</span>
+                    <span class="rating-badge">★ 9.0</span>
+                    <span class="chapter-count-pill">Ch. 52</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Kagurabachi</h2>
+                        <p class="manga-author">By <span>Takeru Hokazono</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Shonen</span>
+                        <span>Action</span>
+                        <span>Dark Fantasy</span>
+                    </div>
+                    <p class="manga-desc">
+                        Armed with his deceased father's magical katana, Chihiro embarks on a relentless war against Tokyo's criminal sorcerers.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. Attack on Titan -->
+            <div class="manga-card" data-title="attack on titan aot" data-author="hajime isayama" data-genres="dark fantasy psychological action" data-status="completed">
+                <div class="manga-cover">
+                    <img src="../pictures/aot.jpg" alt="Attack on Titan" loading="lazy">
+                    <span class="status-badge completed">● Completed</span>
+                    <span class="rating-badge">★ 9.5</span>
+                    <span class="chapter-count-pill">139 Ch.</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Attack on Titan</h2>
+                        <p class="manga-author">By <span>Hajime Isayama</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Dark Fantasy</span>
+                        <span>Psychological</span>
+                        <span>Action</span>
+                    </div>
+                    <p class="manga-desc">
+                        Surviving inside fortified walls, humanity wages desperate combat against colossal man-eating Titans.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Naruto -->
+            <div class="manga-card" data-title="naruto" data-author="masashi kishimoto" data-genres="shonen action adventure" data-status="completed">
+                <div class="manga-cover">
+                    <img src="../pictures/naruto.webp" alt="Naruto" loading="lazy">
+                    <span class="status-badge completed">● Completed</span>
+                    <span class="rating-badge">★ 9.0</span>
+                    <span class="chapter-count-pill">700 Ch.</span>
+                </div>
+                <div class="manga-details">
+                    <div class="manga-header">
+                        <h2 class="manga-title">Naruto</h2>
+                        <p class="manga-author">By <span>Masashi Kishimoto</span></p>
+                    </div>
+                    <div class="manga-tags">
+                        <span>Shonen</span>
+                        <span>Action</span>
+                        <span>Adventure</span>
+                    </div>
+                    <p class="manga-desc">
+                        Shunned orphan ninja Naruto Uzumaki dreams of gaining recognition and becoming the supreme ninja leader of the Leaf.
+                    </p>
+                    <div class="manga-actions">
+                        <button class="read-btn">📖 Read Manga</button>
+                        <button class="bookmark-btn">🔖 Save</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Empty state when no search matches -->
+        <div id="no-results" class="no-results" style="display: none;">
+            <div class="no-results-icon">📖</div>
+            <h3>No manga matched your search</h3>
+            <p>Try searching for a different title, author, or reset the active filter tags.</p>
+            <button id="reset-filters-btn">Reset All Filters</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <h2>SHONEN<span>HUB</span></h2>
+                <p>
+                    Your next anime and manga adventure starts here.
+                    Discover, read, and explore your favorite stories.
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <a href="../index.html">Home</a>
+                <a href="./toprated.html">Top Anime</a>
+                <a href="./mangas.html">Mangas</a>
+                <a href="./about.html">About</a>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-links">
+                <h3>Support</h3>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#">𝕏</a>
+                    <a href="#">◎</a>
+                    <a href="#">▶</a>
+                    <a href="#">♪</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ShonenHub. All rights reserved.</p>
+            <p>Made for anime & manga fans ⚡</p>
+        </div>
+    </footer>
+
+    <script src="../js-sheets/manga.js"></script>
+</body>
+</html>

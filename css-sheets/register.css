@@ -1,0 +1,422 @@
+/* ========================================================
+   SHONENHUB - REGISTER PAGE STYLESHEET
+   Matching ShonenHub Dark Theme with Crimson Accents
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Noto+Sans+JP:wght@500;700&display=swap');
+
+:root {
+  --bg-primary: #070b14;
+  --bg-secondary: #0d1424;
+  --bg-card: rgba(13, 20, 36, 0.85);
+  --bg-input: rgba(9, 14, 26, 0.85);
+  --border-subtle: #1d2940;
+  --border-glow: rgba(247, 36, 89, 0.45);
+  --accent-crimson: #f72459;
+  --accent-hot: #ff3b6f;
+  --text-main: #f4f7ff;
+  --text-muted: #8e98ad;
+  --text-dim: #606d85;
+  --font-main: "Inter", sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-jp: "Noto Sans JP", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  overflow-x: hidden;
+}
+
+/* Subtle manga screentone dot overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(rgba(247, 36, 89, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 28px 28px, 14px 14px;
+  background-position: 0 0, 7px 7px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient glow orbs in the background */
+.ambient-glow-1 {
+  position: fixed;
+  top: 10%;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(247, 36, 89, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.ambient-glow-2 {
+  position: fixed;
+  bottom: 10%;
+  left: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* Main Auth Layout Wrapper */
+.auth-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Top Back Navigation Link */
+.auth-top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(18, 26, 44, 0.4);
+  border: 1px solid rgba(29, 41, 64, 0.5);
+  transition: all 0.25s ease;
+}
+
+.back-link:hover {
+  color: var(--text-main);
+  border-color: rgba(247, 36, 89, 0.4);
+  background: rgba(18, 26, 44, 0.8);
+  transform: translateX(-2px);
+}
+
+.back-link svg {
+  transition: transform 0.25s ease;
+}
+
+.back-link:hover svg {
+  transform: translateX(-3px);
+  color: var(--accent-crimson);
+}
+
+.auth-badge-top {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--accent-crimson);
+  background: rgba(247, 36, 89, 0.12);
+  border: 1px solid rgba(247, 36, 89, 0.25);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* Auth Card */
+.auth-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(247, 36, 89, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top crimson border accent */
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-crimson), transparent);
+}
+
+/* Brand Logo inside Card */
+.auth-brand {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-brand img {
+  height: 48px;
+  width: auto;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.auth-brand a:hover img {
+  transform: scale(1.03);
+}
+
+/* Header Text */
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-header h1 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.auth-header h1 span {
+  color: var(--accent-crimson);
+}
+
+.auth-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #c0cadc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group label .required-dot {
+  color: var(--accent-crimson);
+  font-size: 14px;
+}
+
+/* Input Wrapper & Icon */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-dim);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s ease;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 13px 44px 13px 44px;
+  color: var(--text-main);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--text-dim);
+}
+
+.input-wrapper input:focus {
+  border-color: var(--accent-crimson);
+  background: rgba(13, 20, 36, 0.95);
+  box-shadow: 0 0 0 3px rgba(247, 36, 89, 0.18);
+}
+
+.input-wrapper:focus-within .input-icon {
+  color: var(--accent-crimson);
+}
+
+/* Toggle Password Visibility Button */
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--text-main);
+}
+
+/* Submit Button */
+.auth-submit-btn {
+  background-color: var(--accent-crimson);
+  border: none;
+  color: #ffffff;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: 6px;
+  box-shadow: 0 4px 15px rgba(247, 36, 89, 0.25);
+}
+
+.auth-submit-btn:hover {
+  background-color: var(--accent-hot);
+  box-shadow: 0 0 20px rgba(247, 36, 89, 0.45);
+  transform: translateY(-1px);
+}
+
+.auth-submit-btn:active {
+  transform: translateY(0);
+}
+
+.auth-submit-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.auth-submit-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Auth Card Footer */
+.auth-footer {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(29, 41, 64, 0.7);
+  text-align: center;
+}
+
+.auth-footer p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--accent-crimson);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: all 0.2s ease;
+}
+
+.auth-footer a:hover {
+  color: var(--accent-hot);
+  text-decoration: underline;
+}
+
+/* Security reassurance at bottom */
+.auth-security-badge {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.auth-security-badge svg {
+  color: var(--accent-crimson);
+}
+
+/* Form Message Feedback */
+.form-feedback {
+  display: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.form-feedback.success {
+  display: block;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+.form-feedback.error {
+  display: block;
+  background: rgba(247, 36, 89, 0.12);
+  border: 1px solid rgba(247, 36, 89, 0.3);
+  color: #ff5c77;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 14px;
+  }
+  
+  .auth-card {
+    padding: 28px 20px;
+  }
+  
+  .auth-header h1 {
+    font-size: 22px;
+  }
+}

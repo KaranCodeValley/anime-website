@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ShonenHub</title>
+    <!-- Fonts matching website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css-sheets/login.css">
+</head>
+<body>
+
+    <!-- Ambient glowing accents -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+
+    <!-- Main Auth Container (No Navbar) -->
+    <main class="auth-wrapper">
+        <!-- Top Nav Link (Back to Home) -->
+        <div class="auth-top-nav">
+            <a href="../index.html" class="back-link" title="Return to home page">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Back to Home</span>
+            </a>
+            <span class="auth-badge-top">PORTAL ACCESS</span>
+        </div>
+
+        <!-- Auth Card -->
+        <div class="auth-card">
+            <!-- ShonenHub Logo -->
+            <div class="auth-brand">
+                <a href="../index.html" title="ShonenHub Home">
+                    <img src="../pictures/shonenHUb.png" alt="ShonenHub Logo">
+                </a>
+            </div>
+
+            <!-- Header -->
+            <header class="auth-header">
+                <h1>Welcome <span>Back</span></h1>
+                <p>Sign in to access your watchlist, manga queue, and profile.</p>
+            </header>
+
+            <!-- Feedback message -->
+            <div id="loginFeedback" class="form-feedback" role="alert"></div>
+
+            <!-- Login Form (Only Email & Password) -->
+            <form id="loginForm" class="auth-form" novalidate>
+                <!-- Email field -->
+                <div class="form-group">
+                    <label for="loginEmail">Email Address <span class="required-dot">*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </span>
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            name="email" 
+                            placeholder="name@example.com" 
+                            required 
+                            autocomplete="email"
+                        >
+                    </div>
+                </div>
+
+                <!-- Password field -->
+                <div class="form-group">
+                    <label for="loginPassword">Password <span class="required-dot">*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </span>
+                        <input 
+                            type="password" 
+                            id="loginPassword" 
+                            name="password" 
+                            placeholder="Enter your password" 
+                            required 
+                            autocomplete="current-password"
+                        >
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="auth-submit-btn">
+                    <span>Sign In</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Card Footer Switch -->
+            <footer class="auth-footer">
+                <p>Don't have an account? <a href="./register.html">Sign Up</a></p>
+            </footer>
+        </div>
+
+        <!-- Security reassurance -->
+        <div class="auth-security-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>ShonenHub Secure Authentication</span>
+        </div>
+    </main>
+
+    <!-- Connect external login.js -->
+    <script src="../js-sheets/login.js"></script>
+</body>
+</html>
